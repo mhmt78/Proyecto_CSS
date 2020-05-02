@@ -21,6 +21,7 @@ header .container {
   border-top-left-radius: 15px;
   width: 100%;
   display: flex;
+  text-shadow: 2px 2px #02010a;
 }
 
 *header .container .container {
@@ -223,21 +224,17 @@ footer .container {
 }
 
 @media screen and (max-width:1024px) and (min-width:640px){
-  header {
+  header h1 {
 		text-align: center;
 	}
 	li {
 		display: inline;
-	}
-	header nav {
-		color: #020202;
 	}
 	header nav ul {
 		margin-left: 10%;
 	}
 	a {
 		font-size: 20px;
-		color: black;
 	}
 	a:hover {
 		background-color: dimgray;
@@ -277,12 +274,79 @@ footer .container {
 	}
 	.contenido .imagen-secundaria img {
 		width: 80%;
-		
-	}
+  }
 	.informacion {
 		width: 35%;
 	}
 	.contacto {
 		width: 35%;
+	}
+}
+
+@media screen and (max-width:640px) {
+  header h1 {
+		text-align: center;
+	}
+	header .container {
+		flex-direction: column;
+	}
+	header .container .container {
+		width: 100%;
+	}
+	header .container .nav {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		justify-content: center;
+	}
+	header .container .nav .nav-item{
+		padding: 2px;
+	}
+	header .container .nav.nav-pills {
+		position: relative;
+	}
+	.principal {
+		position: relative;
+		width: 100%;
+	}
+	
+	.container .playa {
+		height: auto;
+	}
+	.container .parque {
+		height: auto;
+	}
+	.container .rio {
+		height: auto;
+	}
+	.contenido {
+		display: flex;
+		flex-flow: column nowrap;
+	}
+	.contenido .imagen-principal {
+		display: none;
+	}
+	.contenido .descripcion {
+		width: 95%;
+		height: auto;
+	}
+	.contenido .imagen-secundaria {
+		width: 95%;
+		height: auto;
+		align-items: center;
+	}
+	.contenido .imagen-secundaria img {
+		width: 95%;
+		align-items: center;
+	}
+	footer .container {
+		height: 500px;
+	}
+	.informacion {
+		width: 95%;
+	}
+	.contacto {
+		width: 95%;
 	}
 }
